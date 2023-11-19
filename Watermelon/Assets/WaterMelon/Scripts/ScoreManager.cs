@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     [Header("Elements")]
     [SerializeField] private TextMeshProUGUI gameScoreText;
     [SerializeField] private TextMeshProUGUI menuBestScoreText;
+    [SerializeField] private TextMeshProUGUI GameOverBestScoreText;
 
 
     [Header("Settings")]
@@ -47,6 +48,10 @@ public class ScoreManager : MonoBehaviour
             case GameState.Gameover:
                 CalculateBestScore();
                 break;
+            case GameState.GameoverMenu:
+                UpdateBestScoreText();
+                break;
+
 
         }
     }
@@ -86,6 +91,7 @@ public class ScoreManager : MonoBehaviour
     private void UpdateBestScoreText()
     {
         menuBestScoreText.text = bestScore.ToString();
+        GameOverBestScoreText.text = bestScore.ToString();
     }
 
 }
