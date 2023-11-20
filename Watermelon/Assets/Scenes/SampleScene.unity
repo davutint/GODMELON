@@ -535,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191062019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -3, z: 0}
+  m_LocalPosition: {x: -5, y: -4.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 473006245}
@@ -936,6 +936,10 @@ MonoBehaviour:
   menuPanel: {fileID: 1758726547}
   gamePanel: {fileID: 566748043}
   gameOverPanel: {fileID: 835628966}
+  BestScoreObj: {fileID: 892442519}
+  bestScoreTextObj: {fileID: 500932591}
+  RestartButonobj: {fileID: 510887579}
+  GameoverTextobj: {fileID: 2024545057}
 --- !u!1 &367567275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.8475, y: 66.999985}
+  m_AnchoredPosition: {x: 904, y: 0}
   m_SizeDelta: {x: 283.6929, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500932592
@@ -1156,13 +1160,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 63651088}
-  m_Father: {fileID: 835628967}
-  m_RootOrder: 1
+  m_Father: {fileID: 843356755}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000004172325, y: 136}
-  m_SizeDelta: {x: 339.3745, y: 133.6412}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 666, y: -365}
+  m_SizeDelta: {x: 339.3745, y: 133.64124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510887580
 MonoBehaviour:
@@ -1722,7 +1726,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1899541722}
-  - {fileID: 510887579}
   m_Father: {fileID: 1056348817}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1743,7 +1746,7 @@ GameObject:
   - component: {fileID: 843356757}
   - component: {fileID: 843356756}
   m_Layer: 0
-  m_Name: "OyunSonuEkran\u0131"
+  m_Name: GameOverAnaPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,8 +1765,10 @@ RectTransform:
   m_Children:
   - {fileID: 892442519}
   - {fileID: 500932591}
+  - {fileID: 2024545057}
+  - {fileID: 510887579}
   m_Father: {fileID: 1899541722}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1843,7 +1848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.647911, y: 180}
+  m_AnchoredPosition: {x: -1185, y: 107}
   m_SizeDelta: {x: 300, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892442520
@@ -2674,6 +2679,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 473006245}
     m_Modifications:
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6291919
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06985879
+      objectReference: {fileID: 0}
     - target: {fileID: 7179289506481148200, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
       propertyPath: m_Name
       value: GroundWall
@@ -3297,6 +3310,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 473006245}
     m_Modifications:
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6624305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.088190675
+      objectReference: {fileID: 0}
     - target: {fileID: 7179289506481148200, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
       propertyPath: m_Name
       value: RightWall
@@ -3765,7 +3786,7 @@ GameObject:
   - component: {fileID: 1899541724}
   - component: {fileID: 1899541723}
   m_Layer: 0
-  m_Name: Black Overlay
+  m_Name: GameOverSiyahPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3782,7 +3803,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2024545057}
   - {fileID: 843356755}
   m_Father: {fileID: 835628967}
   m_RootOrder: 0
@@ -3805,7 +3825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3529412}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.48235294}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4012,18 +4032,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024545056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1759793456}
   - {fileID: 730511356}
-  m_Father: {fileID: 1899541722}
-  m_RootOrder: 0
+  m_Father: {fileID: 843356755}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000021457672, y: -381}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0, y: 1096}
   m_SizeDelta: {x: 385.6623, y: 68.76367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024545058
@@ -4381,6 +4401,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 473006245}
     m_Modifications:
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6624846
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784926219825044046, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08650541
+      objectReference: {fileID: 0}
     - target: {fileID: 7179289506481148200, guid: 472e55fe24fec460ab7472b5d9525b48, type: 3}
       propertyPath: m_Name
       value: LeftWall

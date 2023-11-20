@@ -10,9 +10,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private GameObject gameOverPanel;
+    public Transform BestScoreObj, bestScoreTextObj, RestartButonobj, GameoverTextobj;
 
 
-    private Vector2 holePos;
     private void Awake()
     {
         GameManager.onGameStateChanged += GameStateChangedCallback;
@@ -63,6 +63,23 @@ public class UIManager : MonoBehaviour
         gameOverPanel.SetActive(true);
         menuPanel.SetActive(false);
         gamePanel.SetActive(false);
+        //animasyonlar
+
+        animasyonBekletveOynat();
+
+    }
+
+
+
+
+    public void animasyonBekletveOynat()
+    {
+
+        GameoverTextobj.DOLocalMoveY(550f, .5f).SetEase(Ease.InOutBack);
+        RestartButonobj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
+        bestScoreTextObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
+        BestScoreObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
+
 
 
     }
