@@ -75,11 +75,11 @@ public class UIManager : MonoBehaviour
     public void MenuAnimOynat()
     {
 
-        GameoverTextobj.DOLocalMoveY(550f, .5f).SetEase(Ease.InOutBack);
-        RestartButonobj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
-        bestScoreTextObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
-        BestScoreObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
-        SupportDeveloperObj.DOLocalMoveX(230f, .5f).SetEase(Ease.InOutBack);
+        GameoverTextobj.DOLocalMoveY(550f, 1f).SetEase(Ease.InOutBack);
+        RestartButonobj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
+        bestScoreTextObj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
+        BestScoreObj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
+        SupportDeveloperObj.DOLocalMoveX(230f, 1f).SetEase(Ease.InOutBack);
         SupportDeveloperObj.DOScale(new Vector2(.87f, 1.23f), .55f).SetLoops(-1, LoopType.Yoyo);
 
 
