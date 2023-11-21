@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private GameObject gameOverPanel;
-    public Transform BestScoreObj, bestScoreTextObj, RestartButonobj, GameoverTextobj;
+    public Transform BestScoreObj, bestScoreTextObj, RestartButonobj, GameoverTextobj, SupportDeveloperObj;
 
 
     private void Awake()
@@ -65,26 +65,32 @@ public class UIManager : MonoBehaviour
         gamePanel.SetActive(false);
         //animasyonlar
 
-        animasyonBekletveOynat();
+        MenuAnimOynat();
 
     }
 
 
 
 
-    public void animasyonBekletveOynat()
+    public void MenuAnimOynat()
     {
 
         GameoverTextobj.DOLocalMoveY(550f, .5f).SetEase(Ease.InOutBack);
         RestartButonobj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
         bestScoreTextObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
         BestScoreObj.DOLocalMoveX(0, .5f).SetEase(Ease.InOutBack);
+        SupportDeveloperObj.DOLocalMoveX(230f, .5f).SetEase(Ease.InOutBack);
+        SupportDeveloperObj.DOScale(new Vector2(.87f, 1.23f), .55f).SetLoops(-1, LoopType.Yoyo);
 
 
 
     }
 
 
+    public void SupportDeveloper()
+    {
+        AdManager.instance.OdulluGoster();
+    }
 
 
 
@@ -94,7 +100,7 @@ public class UIManager : MonoBehaviour
         SetGame();
     }
 
-    public void NextButtonCallback()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

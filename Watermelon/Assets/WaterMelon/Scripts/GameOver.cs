@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
     [Header("Elements")]
-    [SerializeField] private GameObject deadLine;
+    //[SerializeField] private GameObject deadLine;
     [SerializeField] private Transform fruitsParent;
 
     [Header("Timer")]
@@ -32,7 +33,10 @@ public class GameOver : MonoBehaviour
         {
             if (IsFruitAboveLine()) StartTimer();
         }
+
     }
+
+
 
     private void ManageTimerOn()
     {
@@ -71,14 +75,16 @@ public class GameOver : MonoBehaviour
 
     private bool IsFruitAboveLine(Transform fruit)
     {
-        if (fruit.position.y > deadLine.transform.position.y)
-        {
+        if (fruit.position.y > .5f)//deadLine.transform.position.y) bunu iptal etmemin sebebi restart yaptığımda 4 tane kırmızı error veriyor,missing hatası
+        {//if şartını 3.5f yapman gerekiyor test iöin .5 ideal
             return true;
         }
         else
         {
             return false;
         }
+
+
     }
 
     private void StartTimer()

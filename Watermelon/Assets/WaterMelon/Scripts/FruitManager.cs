@@ -31,11 +31,21 @@ public class FruitManager : MonoBehaviour
     private void Awake()
     {
         MergeManager.onMergeProcessed += MergeProcessedCallback;
+        GameManager.onGameStateChanged += OyunBıtınceSpawnEtme;
     }
 
     private void OnDestroy()
     {
         MergeManager.onMergeProcessed -= MergeProcessedCallback;
+        GameManager.onGameStateChanged -= OyunBıtınceSpawnEtme;
+    }
+
+    private void OyunBıtınceSpawnEtme(GameState state)
+    {
+        if (state != GameState.Game)
+        {
+            canControl = false;
+        }
     }
 
     private void Start()
