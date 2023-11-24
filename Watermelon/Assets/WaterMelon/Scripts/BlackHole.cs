@@ -34,6 +34,7 @@ public class BlackHole : MonoBehaviour
     private void BlackHoleProcessCallback()
     {
         blackHole.SetActive(true);
+        AudioManager.instance.BlackHoleSoundCal();
         holePos = blackHole.transform.position;
 
         blackHole.transform.DOScale(new Vector3(2, 2, 2), 1f).OnComplete(() =>

@@ -29,7 +29,6 @@ public class AdManager : MonoBehaviour
 
     public void InitializeAds()
     {
-        IronSource.Agent.setMetaData("is_test_suite", "enable");
 
         //test için eklenen satırları silmeyi unutma
         IronSource.Agent.setConsent(true);
@@ -65,7 +64,7 @@ public class AdManager : MonoBehaviour
     {
         Debug.Log("IronSource has been initialized with success");
         IronSource.Agent.validateIntegration(); // reklam entegrasyonunda hata varsa xcode testinde bunu ayrıntılı görmemizi sağlayacak
-        IronSource.Agent.launchTestSuite();//bunu yayımlarken sil test suiti bu
+        //bunu yayımlarken sil test suiti bu
 
 
     }

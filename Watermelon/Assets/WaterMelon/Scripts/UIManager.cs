@@ -89,6 +89,7 @@ public class UIManager : MonoBehaviour
 
     public void SupportDeveloper()
     {
+        AudioManager.instance.ClickSoundCal();
         AdManager.instance.OdulluGoster();
     }
 
@@ -96,12 +97,14 @@ public class UIManager : MonoBehaviour
 
     public void PlayButtonCallback()
     {
+        AudioManager.instance.ClickSoundCal();
         GameManager.instance.SetGameState();
         SetGame();
     }
 
     public void RestartGame()
     {
+        AudioManager.instance.ClickSoundCal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

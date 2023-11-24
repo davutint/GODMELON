@@ -89,7 +89,10 @@ public class Fruit : MonoBehaviour
     {
 
         this.transform.DOScale(new Vector3(0, 0, 0), scaleSpeed);
-        this.transform.DOMove(BlackHoleobj.transform.position, speed).SetEase(Ease.InOutBack);
+        this.transform.DOMove(BlackHoleobj.transform.position, speed).SetEase(Ease.InOutBack).OnComplete(() =>
+        {
+            AudioManager.instance.PopupCal();
+        });
 
     }
 
