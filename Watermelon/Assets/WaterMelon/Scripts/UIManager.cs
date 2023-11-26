@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private GameObject gameOverPanel;
-    public Transform BestScoreObj, bestScoreTextObj, RestartButonobj, GameoverTextobj, SupportDeveloperObj;
+    public Transform BestScoreObj, bestScoreTextObj, RestartButonobj, GameoverTextobj, SupportDeveloperObj, LiderTablosuobj;
+    public Authentication authentication;
 
 
     private void Awake()
@@ -70,13 +71,17 @@ public class UIManager : MonoBehaviour
     }
 
 
-
+    public void LiderTablosuAc()
+    {
+        authentication.OnShowLeaderboard();
+    }
 
     public void MenuAnimOynat()
     {
 
         GameoverTextobj.DOLocalMoveY(550f, 1f).SetEase(Ease.InOutBack);
         RestartButonobj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
+        LiderTablosuobj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
         bestScoreTextObj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
         BestScoreObj.DOLocalMoveX(0, 1f).SetEase(Ease.InOutBack);
         SupportDeveloperObj.DOLocalMoveX(230f, 1f).SetEase(Ease.InOutBack);

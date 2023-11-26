@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class AdManager : MonoBehaviour
 {
-#if UNITY_ANDROID
-        string appKey = "85460dcd";
-#elif UNITY_IPHONE
-    string appKey = "1c8f541d5";   //"8545d445";
-#else
-        string appKey = "unexpected_platform";
-#endif
-    public static AdManager instance;
 
+    public static AdManager instance;
+    string appKey = "1c8f541d5";
     private void Awake()
     {
         instance = this;
@@ -25,11 +19,13 @@ public class AdManager : MonoBehaviour
     {
         InitializeAds();
         LoadBanner();
+        //lider tablosu ekledikten sonraki güncellemede banner reklamı etkinleştirirsin.
     }
 
     public void InitializeAds()
     {
 
+        //IronSource.Agent.setMetaData("is_test_suite", "enable");
         //test için eklenen satırları silmeyi unutma
         IronSource.Agent.setConsent(true);
         IronSource.Agent.init(appKey, IronSourceAdUnits.REWARDED_VIDEO, IronSourceAdUnits.BANNER);
@@ -52,7 +48,7 @@ public class AdManager : MonoBehaviour
 
     public void LoadBanner()
     {
-        IronSource.Agent.loadBanner(IronSourceBannerSize.BANNER, IronSourceBannerPosition.BOTTOM);
+        IronSource.Agent.loadBanner(IronSourceBannerSize.SMART, IronSourceBannerPosition.BOTTOM);
     }
     public void DestroyBanner()
     {
@@ -64,7 +60,7 @@ public class AdManager : MonoBehaviour
     {
         Debug.Log("IronSource has been initialized with success");
         IronSource.Agent.validateIntegration(); // reklam entegrasyonunda hata varsa xcode testinde bunu ayrıntılı görmemizi sağlayacak
-        //bunu yayımlarken sil test suiti bu
+        //IronSource.Agent.launchTestSuite(); //bunu yayımlarken sil test suiti bu
 
 
     }

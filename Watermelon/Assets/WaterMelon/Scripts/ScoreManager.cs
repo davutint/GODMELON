@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
-using UnityEngine.PlayerLoop;
-using System;
+using DG.Tweening;
+using Apple.GameKit.Leaderboards;
+using Apple.GameKit;
+using Apple.GameKit.Multiplayer;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -92,6 +97,26 @@ public class ScoreManager : MonoBehaviour
     {
         menuBestScoreText.text = bestScore.ToString();
         GameOverBestScoreText.text = bestScore.ToString();
+        OnReportLeaderboardScore();
+    }
+
+    public async void OnReportLeaderboardScore()
+    {
+        var leaderboards = await GKLeaderboard.LoadLeaderboards();
+        var leaderboard = leaderboards.First(l => l.BaseLeaderboardId == "Godmelon");
+
+        await leaderboard.SubmitScore(bestScore, 0, GKLocalPlayer.Local);
+
+
+
+        var scores = await leaderboard.LoadEntries(GKLeaderboard.PlayerScope.Global, GKLeaderboard.TimeScope.AllTime, 0, 100);
+
+        Debug.LogError($"my score: {scores.LocalPlayerEntry.Score}");
+
+        foreach (var score in scores.Entries)
+        {
+            Debug.LogError($"score: {score.Score} by {score.Player.DisplayName}");
+        }
     }
 
 }

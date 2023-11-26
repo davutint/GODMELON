@@ -1,0 +1,4 @@
+<linker>
+      <assembly fullname="Apple.Core" ignoreIfMissing="1" preserve="all"/>  
+      <assembly fullname="Apple.GameKit" ignoreIfMissing="1" preserve="all"/>
+</linker>
