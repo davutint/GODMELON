@@ -15,14 +15,12 @@ public class AdManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        InitializeAds();
-
-
-
+        
     }
 
     private void Start()
-    {
+    {   
+        InitializeAds();//0.2.2de bu awakede çalışıyor,çıktı aldıktan sonra starta çektim güncellemede reklam düzgün çalısırsa tekrara awake al
         LoadBanner();
         //lider tablosu ekledikten sonraki güncellemede banner reklamı etkinleştirirsin.
     }

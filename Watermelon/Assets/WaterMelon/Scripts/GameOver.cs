@@ -75,7 +75,7 @@ public class GameOver : MonoBehaviour
 
     private bool IsFruitAboveLine(Transform fruit)
     {
-        if (fruit.position.y > -3.5f)//deadLine.transform.position.y) bunu iptal etmemin sebebi restart yaptığımda 4 tane kırmızı error veriyor,missing hatası
+        if (fruit.position.y > 3.5f)//deadLine.transform.position.y) bunu iptal etmemin sebebi restart yaptığımda 4 tane kırmızı error veriyor,missing hatası
         {//if şartını 3.5f yapman gerekiyor test iöin .5 ideal
             return true;
         }
