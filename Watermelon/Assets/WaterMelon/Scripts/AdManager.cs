@@ -6,10 +6,16 @@ public class AdManager : MonoBehaviour
 {
 
     public static AdManager instance;
+#if UNITY_IPHONE
     string appKey = "1c8f541d5";
+
+#else
+ string appKey="unexpecred_platform"; 
+#endif
     private void Awake()
     {
         instance = this;
+        InitializeAds();
 
 
 
@@ -17,7 +23,6 @@ public class AdManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeAds();
         LoadBanner();
         //lider tablosu ekledikten sonraki güncellemede banner reklamı etkinleştirirsin.
     }
@@ -48,7 +53,7 @@ public class AdManager : MonoBehaviour
 
     public void LoadBanner()
     {
-        IronSource.Agent.loadBanner(IronSourceBannerSize.SMART, IronSourceBannerPosition.BOTTOM);
+        IronSource.Agent.loadBanner(IronSourceBannerSize.BANNER, IronSourceBannerPosition.BOTTOM);
     }
     public void DestroyBanner()
     {
