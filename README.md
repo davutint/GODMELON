@@ -1,2 +1,2 @@
 # GODMELON
-Watermelon oyun mekaniği ile yapılmış bir hyper casual
+Merge oyun mekaniği ile yapılmış bir hyper casual
