@@ -149,7 +149,7 @@ public class GameOver : MonoBehaviour
 
     private bool BıtıseYaklastı(Transform planet)//bu olduğunda karadelik butonu çıkmalı
     {
-        if (planet.position.y > 2.7f)//test için -3.5 normalı 2.7
+        if (planet.position.y > 1.3f)//test için -3.5 normalı 2.7 ama 1.3 ile 0.2.3 versiyonunu yayımladın
         {
             return true;
         }

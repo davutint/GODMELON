@@ -109,6 +109,7 @@ public class ScoreManager : MonoBehaviour
         menuBestScoreText.text = bestScore.ToString();
         GameOverBestScoreText.text = bestScore.ToString();
         OnReportLeaderboardScore();
+        //üsttekinin yorum satırını oyunu yayınlarken kaldır
     }
 
     public async void OnReportLeaderboardScore()

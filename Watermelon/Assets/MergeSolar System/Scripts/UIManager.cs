@@ -51,8 +51,8 @@ public class UIManager : MonoBehaviour
     public void KaraDelikButonEvent()//reklamı çağır, reklam içinde de karadelik eventini çağır
     {
         AudioManager.instance.ClickSoundCal();
-        //AdManager.instance.OdulluGoster(); // video çekerken böyle olsun yayınlarken yorum satırını kaldır
-        BlackHole.instance.BlackHoleProcessCallback();//bunu build alırken yorum satırı yap üsttekinin yorum satırını kaldır.
+        AdManager.instance.OdulluGoster(); // video çekerken böyle olsun yayınlarken yorum satırını kaldır
+        //BlackHole.instance.BlackHoleProcessCallback();//bunu build alırken yorum satırı yap üsttekinin yorum satırını kaldır.
         KaraDelikButonuPasifEt();
     }
 
@@ -149,6 +149,7 @@ public class UIManager : MonoBehaviour
     public void LiderTablosuAc()
     {
         authentication.OnShowLeaderboard();
+        //yorum satırını kaldır yukardakinin
     }
 
     public void MenuAnimOynat()

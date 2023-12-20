@@ -20,6 +20,14 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+       
+
+        if (!PlayerPrefs.HasKey(ArkaPlanSes))
+        {
+            PlayerPrefs.SetFloat(ArkaPlanSes, 0.05f);
+        }
+
+        slider.value = PlayerPrefs.GetFloat(ArkaPlanSes);
     }
     public void SaveData()//burada slider datasını kaydetmeliyiz,backto game butonunda yapmalıyız
     {
