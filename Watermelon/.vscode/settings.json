@@ -52,5 +52,6 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Watermelon.sln"
+    "dotnet.defaultSolution": "Watermelon.sln",
+    "git.ignoreLimitWarning": true
 }

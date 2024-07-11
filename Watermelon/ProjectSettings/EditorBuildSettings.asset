@@ -9,6 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5f152c26aae584ba9b373acb066c9876
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MilkyWay.unity
+    guid: 32f9e38d6f2e84593a220e5d95575c86
+  - enabled: 1
+    path: Assets/Scenes/Andromeda.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TriangledGalaxy.unity
+    guid: 405f4efe0f6d94e11b799b19d6b4143f
+  - enabled: 1
+    path: Assets/Scenes/Timer.unity
+    guid: 52f52684c13ba459b9aa5414bbed1748
+  - enabled: 0
+    path: Assets/Scenes/TESTSCENE.unity
+    guid: 69cefd4a592554f98be51dcab66b4e04
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

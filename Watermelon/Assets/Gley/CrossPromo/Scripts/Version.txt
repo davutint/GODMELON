@@ -1,0 +1,5 @@
+{
+    "folderName": "CrossPromo",
+    "longVersion": "2.0.0",
+    "shortVersion": 200
+}

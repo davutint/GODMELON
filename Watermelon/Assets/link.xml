@@ -1,4 +1,7 @@
 <linker>
       <assembly fullname="Apple.Core" ignoreIfMissing="1" preserve="all"/>  
       <assembly fullname="Apple.GameKit" ignoreIfMissing="1" preserve="all"/>
+      <assembly fullname="Unity.Services.Authentication" ignoreIfMissing="1" preserve="all" />
+      <assembly fullname="Unity.Services.CloudSave" ignoreIfMissing="1" preserve="all" />
+
 </linker>
